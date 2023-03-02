@@ -1,0 +1,17 @@
+package com.example.demo.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.example.demo.models.MesaModel;
+import com.example.demo.models.ProductModel;
+
+public interface MesaRepository extends JpaRepository<MesaModel, Long>{
+
+	Optional<MesaModel> findByNumber(int number);
+	
+}
